@@ -3,17 +3,16 @@ import { storiesOf } from "@storybook/react";
 import ShowcaseCard from "../../src/Cards/ShowcaseCard";
 import ShowcaseCardContainer from "../../src/Cards/ShowcaseCardContainer";
 import {
-  cat1,
   polygons,
   waves,
-  weezy,
   moon,
   adidas,
   triumph,
   niel,
   pow,
-  google,
+  spiderman,
   grass,
+  google,
 } from "../CardData";
 
 
@@ -55,15 +54,11 @@ storiesOf("ShowcaseCard", module)
   );
 })
 .add("{img, frontImg}", () => {
-  const sources2 = [ adidas, triumph ];
-  const sources1 = [ niel, moon ];
-  const sources3 = [ google , pow ];
-  const sources4 = [ weezy , pow ];
   return (
     <BuildShowcase column>
-      <BuildShowcase row sources={sources3} />
-      <BuildShowcase row sources={sources2} />
-      <BuildShowcase row sources={sources1} />
+      <BuildShowcase row sources={[ pow, spiderman ]} />
+      <BuildShowcase row sources={[ adidas, triumph ]} />
+      <BuildShowcase row sources={[ moon, niel ]} />
     </BuildShowcase>
   );
 })

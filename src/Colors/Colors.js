@@ -39,6 +39,7 @@ const Colors = {
   darkBlue: "#303f9f",
   green: "#4caf50",
   grey: "#e0e0e0",
+  darkGrey: "#adadad",
   orange: "#ff5722",
   purple: "#7e57c2",
   red: "#f44336",

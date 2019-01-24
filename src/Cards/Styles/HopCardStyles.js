@@ -1,6 +1,7 @@
 import Color from "../../Colors/Colors";
 import LinearGradient from "../../Colors/LinearGradient";
 import EitherOr from "../../Helpers/EitherOr";
+import Font from "../../Styles/Font";
 
 const ACCENT = Color.grey;
 const COLOR = Color.black;
@@ -14,7 +15,7 @@ export default (styles) => ({
     flexBasis: `${EitherOr(styles.width, WIDTH)}px`,
     borderRadius: `${BORDER_RADIUS}px`,
     overflow: "hidden",
-    fontFamily: "Arial, Helvetica, sans-serif",
+    fontFamily: Font.family,
   },
   HopCard: {
     cursor: "default",

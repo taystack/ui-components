@@ -17,7 +17,8 @@ import SpaceBackground from "../images/SpaceBackground.png";
 import Pow from "../images/Pow.png";
 import PowBackground from "../images/PowBackground.png";
 import Google from "../images/Google.png";
-import GoogleBackground from "../images/GoogleBackground.png";
+import SpiderMan from "../images/SpiderMan.png";
+import SpiderManBackground from "../images/SpiderManBackground.png";
 
 
 // Showcase props
@@ -54,9 +55,12 @@ export const pow = {
   frontImg: {src: Pow, alt: "wait for it..."},
   img: {src: PowBackground, alt: "batman is loading"},
 };
+export const spiderman = {
+  frontImg: {src: SpiderMan, alt: "wait for it..."},
+  img: {src: SpiderManBackground, alt: "spiderman is loading"},
+};
 export const google = {
   frontImg: {src: Google, alt: "wait for it..."},
-  img: {src: GoogleBackground, alt: "google is loading"},
 };
 
 export default {
@@ -73,5 +77,6 @@ export default {
   triumph,
   niel,
   pow,
+  spiderman,
   google,
 };
