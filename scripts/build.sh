@@ -9,7 +9,7 @@ echo """
 git checkout master &&\
 echo -ne ':wq\n' | git pull origin develop &&\
 yarn dry-run
-rm -rf .storybook config images src stories
+rm -rf .storybook config
 mv storybook-static docs
 git add . &&\
 git commit -m "Deploying github pages" &&\
