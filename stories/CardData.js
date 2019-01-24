@@ -14,6 +14,8 @@ import Triumph from "../images/Triumph.png";
 import TriumphBackground from "../images/TriumphBackground2.png";
 import Niel from "../images/Niel.png";
 import SpaceBackground from "../images/SpaceBackground.png";
+import Pow from "../images/Pow.png";
+import PowBackground from "../images/PowBackground.png";
 
 
 // Showcase props
@@ -45,6 +47,10 @@ export const triumph = {
 export const niel = {
   frontImg: {src: Niel, alt: "an ad is loading"},
   img: {src: SpaceBackground, alt: "ad shoes are loading"},
+};
+export const pow = {
+  frontImg: {src: Pow, alt: "wait for it..."},
+  img: {src: PowBackground, alt: "batman is loading"},
 };
 
 export default {

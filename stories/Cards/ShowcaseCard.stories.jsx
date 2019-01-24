@@ -11,6 +11,7 @@ import {
   adidas,
   triumph,
   niel,
+  pow,
 } from "../CardData";
 
 
@@ -54,12 +55,12 @@ storiesOf("ShowcaseCard", module)
 .add("{img, frontImg}", () => {
   const sources2 = [ adidas, triumph ];
   const sources1 = [ niel, weezy ];
-  const sources3 = [ moon ];
+  const sources3 = [ moon, pow ];
   return (
     <BuildShowcase column>
+      <BuildShowcase row sources={sources3} />
       <BuildShowcase row sources={sources2} />
       <BuildShowcase row sources={sources1} />
-      <BuildShowcase row sources={sources3} />
     </BuildShowcase>
   );
 })
