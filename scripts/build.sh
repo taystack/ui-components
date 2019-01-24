@@ -11,4 +11,5 @@ git pull origin develop &&\
 ./node_modules/.bin/build-storybook -- --dry-run -c .storybook &&\
 rm -rf .storybook config images scripts src stories
 git push origin master &&\
-git checkout develop
+git checkout develop &&\
+rm -rf storybook-static
