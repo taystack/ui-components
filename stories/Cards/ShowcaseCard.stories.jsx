@@ -3,8 +3,6 @@ import { storiesOf } from "@storybook/react";
 import ShowcaseCard from "../../src/Cards/ShowcaseCard";
 import ShowcaseCardContainer from "../../src/Cards/ShowcaseCardContainer";
 import {
-  polygons,
-  waves,
   moon,
   adidas,
   triumph,
@@ -36,23 +34,6 @@ BuildShowcase.defaultProps = {
 };
 
 storiesOf("ShowcaseCard", module)
-.add("no props", () => (
-  <ShowcaseCard text="If you don't provide an 'img' prop, you get a cat." />
-))
-.add("{title}", () => (<ShowcaseCard title="Super Easy" />))
-.add("{text}", () => (<ShowcaseCard text="Barely an inconvienence" />))
-.add("{title, text}", () => (
-  <ShowcaseCard
-    title="Super Easy,"
-    text="Barely an inconvienence"
-  />
-))
-.add("{img, title, text}", () => {
-  const sources1 = [ polygons , waves ];
-  return (
-    <BuildShowcase row sources={sources1} />
-  );
-})
 .add("{img, frontImg}", () => {
   return (
     <BuildShowcase column>
@@ -80,34 +61,7 @@ storiesOf("ShowcaseCard", module)
     </ShowcaseCard>
   );
 })
-// .add("{img, children}", () => {
-//   return (
-//     <ShowcaseCard img={cat1.img}>
-//   );
-// })
-// .add("Rows", () => {
-//   const sources = [ cat1, cat2 ];
-//
-//   return (
-//     <BuildShowcase row sources={sources} />
-//   );
-// })
-// .add("Columns", () => {
-//   const sources = [ cat3, cat4 ];
-//
-//   return (
-//     <BuildShowcase sources={sources} column />
-//   );
-// })
-// .add("Grid", () => {
-//   const sources1 = [ cat1, cat2 ];
-//   const sources2 = [ cat3, cat4 ];
-//
-//   return (
-//     <BuildShowcase column>
-//       <BuildShowcase sources={sources1} row />
-//       <BuildShowcase sources={sources2} row />
-//     </BuildShowcase>
-//   );
-// })
+.add("Tester", () => (
+  <ShowcaseCard text="If you don't provide an 'img' prop, you get a cat." />
+))
 ;
