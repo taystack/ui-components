@@ -12,6 +12,7 @@ echo """
   Moving storybook-static/ to docs/
 
 """
+rm -rf docs
 mv storybook-static docs
 
 echo """
