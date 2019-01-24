@@ -1,15 +1,31 @@
 #!/usr/bin/env bash
 
 echo """
-  Removing images/, src/, stories/
+  Ensure we are on 'master'
 """
-rm -rf images src stories
+# branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+# echo $branch == 'master' ? "yep" : "nope"
+# if [[$branch != 'master']] ; then
+#   echo """
+#
+#   Can only deploy from 'master'
+#
+#   """;
+#   git branch
+#   exit 0;
+# else
+# fi
+
+echo """
+  Removing src/, stories/
+"""
+rm -rf src stories
 
 echo """
   Moving storybook-static/ to docs/
 """
-rm -rf docs
-mv storybook-static docs
+rm -rf ./docs
+mv ./storybook-static docs
 
 echo """
 
