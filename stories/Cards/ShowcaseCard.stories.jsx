@@ -61,7 +61,7 @@ storiesOf("ShowcaseCard", module)
     </ShowcaseCard>
   );
 })
-.add("Tester", () => (
-  <ShowcaseCard text="If you don't provide an 'img' prop, you get a cat." />
+.add("<ShowcaseCard />", () => (
+  <ShowcaseCard />
 ))
 ;
