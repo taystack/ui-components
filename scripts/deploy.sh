@@ -19,7 +19,7 @@ echo """
 echo """
   Removing src/, stories/
 """
-rm -rf src stories
+# rm -rf src stories
 
 echo """
   Moving storybook-static/ to docs/
