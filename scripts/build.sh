@@ -4,6 +4,7 @@ echo """
 
   Make sure you commit your changes and push develop!!!
 
+  Moving to 'master' and building storybook
 """
 
 git checkout master &&\
