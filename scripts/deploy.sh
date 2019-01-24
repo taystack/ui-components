@@ -16,16 +16,18 @@ echo """
 # else
 # fi
 
+<<<<<<< Updated upstream
 echo """
   Removing src/, stories/
 """
 rm -rf src stories
+=======
+# echo """
+#   Removing src/, stories/
+# """
+# rm -rf src stories
+>>>>>>> Stashed changes
 
-echo """
-  Moving storybook-static/ to docs/
-"""
-rm -rf ./docs
-mv ./storybook-static docs
 
 echo """
 
