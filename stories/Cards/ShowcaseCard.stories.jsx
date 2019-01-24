@@ -12,6 +12,8 @@ import {
   triumph,
   niel,
   pow,
+  google,
+  grass,
 } from "../CardData";
 
 
@@ -54,8 +56,9 @@ storiesOf("ShowcaseCard", module)
 })
 .add("{img, frontImg}", () => {
   const sources2 = [ adidas, triumph ];
-  const sources1 = [ niel, weezy ];
-  const sources3 = [ moon, pow ];
+  const sources1 = [ niel, moon ];
+  const sources3 = [ google , pow ];
+  const sources4 = [ weezy , pow ];
   return (
     <BuildShowcase column>
       <BuildShowcase row sources={sources3} />
@@ -66,8 +69,19 @@ storiesOf("ShowcaseCard", module)
 })
 .add("{img, children}", () => {
   return (
-    <ShowcaseCard img={cat1.img}>
-      Some Child Text
+    <ShowcaseCard img={grass.img} frontImg={google.frontImg}>
+      <input
+        placeholder="Search Google or type a URL"
+        style={{
+          background: "#eee",
+          border: 0,
+          borderRadius: 20,
+          padding: 10,
+          width: "calc(100% - 80px)",
+          outline: "none",
+          marginTop: 20,
+        }}
+      />
     </ShowcaseCard>
   );
 })

@@ -8,23 +8,26 @@ class Counter {
     return this.increment < 0;
   }
 
+  get isDone() {
+    return this.countingDown ? this.current <= this.to : this.current >= this.to;
+  }
+
   get value() {
-    if (this.isDone()) return this.to;
-    return this.current;
+    return this.isDone ? this.to : this.current;
+  }
+
+  getIncrement(multiplier) {
+    return (this.current > this.to ? -1 : 1) * multiplier;
   }
 
   setTarget(to, increment = 1) {
     this.to = to;
-    this.increment = (this.current > this.to ? -1 : 1) * increment;
+    this.increment = this.getIncrement(increment);
     return this;
   }
 
-  isDone() {
-    return this.countingDown ? this.current <= this.to : this.current >= this.to;
-  }
-
   turn() {
-    if (this.isDone()) return this.value;
+    if (this.isDone) return this.value;
     this.current += this.increment;
     return this.value;
   }

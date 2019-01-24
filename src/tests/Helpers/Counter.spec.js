@@ -11,14 +11,14 @@ describe("Counter", () => {
 
   it("should count up to a number with turn()", () => {
     const counter = new Counter(0, 10);
-    while (!counter.isDone()) { counter.turn(); }
+    while (!counter.isDone) { counter.turn(); }
     expect(turn).toHaveBeenCalledTimes(10);
     expect(counter.value).toEqual(10);
   });
 
   it("should count up to 0 with turn()", () => {
     const counter = new Counter(-10, 0);
-    while (!counter.isDone()) { counter.turn(); }
+    while (!counter.isDone) { counter.turn(); }
     expect(turn).toHaveBeenCalledTimes(10);
     expect(counter.value).toEqual(0);
   });

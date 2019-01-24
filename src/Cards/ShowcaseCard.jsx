@@ -49,7 +49,7 @@ class ShowcaseCard extends React.Component {
 
   gracefulOrigin() {
     if (!this.xTracker || !this.yTracker) return;
-    if (this.xTracker.isDone() && this.yTracker.isDone()) {
+    if (this.xTracker.isDone && this.yTracker.isDone) {
       clearInterval(this.mouseMoveInterval);
     }
   }
@@ -120,11 +120,16 @@ class ShowcaseCard extends React.Component {
     return null;
   }
 
+  get hoverScale() {
+    return this.state.hovering ? 1 : 0.8;
+  }
+
   renderForeground() {
     let el = null;
     let text = null;
     let frontImage = null;
     let hasForeground = false;
+    let children = null;
     if (this.hasText) {
       hasForeground = true;
       text = (
@@ -148,14 +153,13 @@ class ShowcaseCard extends React.Component {
         style.height = "auto";
         style.width = "100%";
       }
-      const scale = this.state.hovering ? "1" : "0.8";
       frontImage = (
         <img
           src={this.props.frontImg.src}
           alt={this.props.frontImg.alt}
           style={{
             transition: "transform 400ms",
-            transform: `scale(${scale})`,
+            transform: `scale(${this.hoverScale})`,
             maxHeight: this.height,
             maxWidth: this.width,
           }}
@@ -163,6 +167,15 @@ class ShowcaseCard extends React.Component {
       )
     }
     if (this.props.children) {
+      children = React.Children.map(this.props.children, (child, i) => (
+        React.cloneElement(child, {
+          style: {
+            transition: "transform 400ms",
+            transform: `scale(${this.hoverScale + 0.2})`,
+            ...child.props.style,
+          },
+        })
+      ));
       hasForeground = true;
     }
     if (hasForeground) {
@@ -175,7 +188,7 @@ class ShowcaseCard extends React.Component {
         >
           {frontImage}
           {text}
-          {this.props.children}
+          {children}
         </div>
       );
     }

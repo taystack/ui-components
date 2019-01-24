@@ -46,7 +46,7 @@ class FilterTag extends React.Component {
       this.width = new Counter(this.state.width, 0, 1.75);
       this.removeTimeout = setTimeout(() => {
         this.removeInterval = setInterval(() => {
-          if (this.width.isDone()) return;
+          if (this.width.isDone) return;
           if (this.width.turn() === 0) {
             this.remove();
             return;
