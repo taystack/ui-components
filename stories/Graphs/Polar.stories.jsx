@@ -8,10 +8,6 @@ class PolarTester extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.reset = {
-    //   data: [1,3,2,5,2,5],
-    //   labels: ["foo", "bar", "baz", "bin", "pho", "foo1"],
-    // };
     const { data, labels } = this.reset;
     this.state = {
       data,
@@ -21,6 +17,7 @@ class PolarTester extends React.Component {
 
     this.handleAdd = this.handleAdd.bind(this);
     this.handleReset = this.handleReset.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   get reset() {
@@ -45,6 +42,10 @@ class PolarTester extends React.Component {
     })
   }
 
+  handleClick(value, label) {
+    console.log("Polar click", label, value);
+  }
+
   render() {
     return (
       <div>
@@ -53,6 +54,7 @@ class PolarTester extends React.Component {
         <Polar
           data={this.state.data}
           labels={this.state.labels}
+          onClick={this.handleClick}
         />
       </div>
     );

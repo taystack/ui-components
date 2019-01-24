@@ -9,10 +9,7 @@ export default class PolarGraph extends React.Component {
     super(props);
 
     this.chart = React.createRef();
-  }
-
-  componentDidMount() {
-    console.log("this.chart", this.chart.current);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentWillMount() {
@@ -30,7 +27,7 @@ export default class PolarGraph extends React.Component {
       scale: {
         display: false,
       },
-      events: ["click"],
+      events: ["click", "mousemove"],
     };
   }
 
@@ -46,6 +43,13 @@ export default class PolarGraph extends React.Component {
     };
   }
 
+  handleClick(clickedElements) {
+    if (!clickedElements.length) return;
+    const index = clickedElements[0]._index;
+    const { data, labels } = this.props;
+    this.props.onClick(data[index], labels[index]);
+  }
+
   render() {
     return (
       <div style={{
@@ -58,6 +62,7 @@ export default class PolarGraph extends React.Component {
           height={200}
           data={this.data}
           options={this.options}
+          onElementsClick={this.handleClick}
         />
       </div>
     );
@@ -67,9 +72,11 @@ export default class PolarGraph extends React.Component {
 PolarGraph.propTypes = {
   data: PropTypes.array,
   labels: PropTypes.array,
+  onClick: PropTypes.func,
 };
 
 PolarGraph.defaultProps = {
   data: {},
   labels: [],
+  onClick: () => {},
 };

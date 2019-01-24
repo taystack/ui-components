@@ -43,7 +43,7 @@ const CarouselTester = (props) => {
   );
 }
 
-storiesOf("Carousel", module)
+storiesOf("Carousel - TEST", module)
 .add("with ShowcaseCard", () => {
   return (<CarouselTester count={10} />);
 })
