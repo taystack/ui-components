@@ -10,6 +10,7 @@ git checkout master &&\
 echo -ne '\n' | git pull origin develop &&\
 ./node_modules/.bin/build-storybook -- --dry-run -c .storybook
 rm -rf .storybook config images src stories
+mv storybook-static docs
 git add . &&\
 git commit -m "Deploying github pages" &&\
 git push origin master &&\
