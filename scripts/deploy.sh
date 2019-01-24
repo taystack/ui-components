@@ -3,6 +3,7 @@
 echo """
   Ensure we are on 'master'
 """
+git checkout master
 # branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 # echo $branch == 'master' ? "yep" : "nope"
 # if [[$branch != 'master']] ; then
@@ -16,17 +17,10 @@ echo """
 # else
 # fi
 
-<<<<<<< Updated upstream
-echo """
-  Removing src/, stories/
-"""
-rm -rf src stories
-=======
 # echo """
 #   Removing src/, stories/
 # """
 # rm -rf src stories
->>>>>>> Stashed changes
 
 
 echo """
@@ -36,6 +30,4 @@ echo """
 """
 git add . &&\
 git commit -m "Deploying github pages" &&\
-git push origin master &&\
-git checkout develop &&\
-rm -rf storybook-static
+git push origin master
