@@ -16,16 +16,11 @@ echo """
 # else
 # fi
 
-echo """
-  Removing src/, stories/
-"""
+# echo """
+#   Removing src/, stories/
+# """
 # rm -rf src stories
 
-echo """
-  Moving storybook-static/ to docs/
-"""
-rm -rf ./docs
-mv ./storybook-static docs
 
 echo """
 
