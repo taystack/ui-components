@@ -1,10 +1,9 @@
-[Component Demo](https://taystack.github.io/ui-components/docs/index.html)
+[Component Demo](https://taystack.github.io/ui-components/storybook-static/index.html)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and implements [Storybook](https://github.com/storybooks/storybook) with [Storybook deployer](https://github.com/storybooks/storybook-deployer).
 
 [develop](https://github.com/taystack/ui-components/tree/develop) contains the source code.
 
-[master](https://github.com/taystack/ui-components/) contains the build for the [Component Demo](https://taystack.github.io/ui-components/)
 
 ## Available Scripts
 
