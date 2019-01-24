@@ -7,7 +7,7 @@ echo """
 """
 
 git checkout master && \
-git pull origin develop &&\
+echo -ne '\n' | git pull origin develop
 ./node_modules/.bin/build-storybook -- --dry-run -c .storybook &&\
 rm -rf .storybook config images scripts src stories
 git add . &&\
