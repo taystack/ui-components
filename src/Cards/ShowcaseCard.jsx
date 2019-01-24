@@ -228,6 +228,7 @@ class ShowcaseCard extends React.Component {
 
   render() {
     const image = this.buildBackgroundImage();
+    const foreground = this.renderForeground();
     return (
       <div
         style={{
@@ -250,7 +251,7 @@ class ShowcaseCard extends React.Component {
             }}
           >
             {image}
-            {this.renderForeground()}
+            {foreground}
           </div>
           <div style={this.style.Mirror}>
             <div
@@ -260,6 +261,7 @@ class ShowcaseCard extends React.Component {
                 height: "100%",
               }}>
               {image}
+              {foreground}
             </div>
           </div>
           <div className="MirrorFade" style={this.style.MirrorFade} />
