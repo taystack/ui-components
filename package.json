@@ -59,7 +59,8 @@
   "scripts": {
     "test": "./node_modules/.bin/jest --coverage",
     "start": "start-storybook -p 6006",
-    "build": ". ./scripts/build.sh"
+    "build": ". ./scripts/build.sh",
+    "dry-run": "./node_modules/.bin/build-storybook -- --dry-run -c .storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
