@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 echo """
+
   Make sure you commit your changes and push develop!!!
+
 """
 
 git checkout master && \
