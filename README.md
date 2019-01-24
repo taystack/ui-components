@@ -19,6 +19,6 @@ You will also see any lint errors in the console.
 Run all tests with coverage using [Jest](https://jestjs.io/)
 
 
-### `yarn build-storybook`
+### `yarn build`
 
 Builds a deployable instance of storybook with [Storybook deployer](https://github.com/storybooks/storybook-deployer)

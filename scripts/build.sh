@@ -2,4 +2,4 @@
 
 ./node_modules/.bin/build-storybook -- --dry-run -c .storybook
 
-mv storybook-static dist
+mv storybook-static docs
