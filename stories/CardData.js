@@ -3,6 +3,7 @@ import SickBurn from "../images/SickBurn.png";
 import Polygons from "../images/BlueTriangles.png";
 import Waves from "../images/BlueWaves.png";
 import Grass from "../images/Grass.png";
+import Yarn from "../images/Yarn.png";
 // import TireTread from "../images/TireTread.png";
 // import Star from "../images/Star.png";
 // import SpaceBackground from "../images/SpaceBackground.png";
@@ -19,9 +20,12 @@ import PowBackground from "../images/PowBackground.png";
 import Google from "../images/Google.png";
 import SpiderMan from "../images/SpiderMan.png";
 import SpiderManBackground from "../images/SpiderManBackground.png";
+import Link from "../images/Link.png";
+import LinkBackground from "../images/LinkBackground.png";
 
 
 // Showcase props
+export const yarn = {img: {src: Yarn, alt: "yarn is loading"}};
 export const cat1 = {img: {src: "http://placekitten.com/g/300/400", alt: "a cat is loading"}};
 export const cat2 = {img: {src: "http://placekitten.com/g/301/400", alt: "a cat is loading"}};
 export const cat3 = {img: {src: "http://placekitten.com/g/302/400", alt: "a cat is loading"}};
@@ -58,6 +62,10 @@ export const pow = {
 export const spiderman = {
   frontImg: {src: SpiderMan, alt: "wait for it..."},
   img: {src: SpiderManBackground, alt: "spiderman is loading"},
+};
+export const link = {
+  frontImg: {src: Link, alt: "wait for it..."},
+  img: {src: LinkBackground, alt: "spiderman is loading"},
 };
 export const google = {
   frontImg: {src: Google, alt: "wait for it..."},
