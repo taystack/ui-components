@@ -1,7 +1,11 @@
 {
   "name": "@taystack/react-ui",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.01",
+  "main": "<rootDir>/dist/index.js",
+  "keywords": ["react", "ui", "card"],
+  "author": "Taylor Stackpole (@taystack)",
+  "files": ["<rootDir>/dist"],
+  "license": "MIT",
   "dependencies": {
     "@babel/core": "7.1.6",
     "@storybook/react": "^4.1.7",
