@@ -43,9 +43,9 @@ class InputRenderer extends React.Component {
       }}>
         <div style={{
           display: "flex",
-          alignItems: "center",
           justifyContent: "center",
           marginLeft: 100,
+          marginTop: 100,
         }}>
           <Input
             style={this.style}

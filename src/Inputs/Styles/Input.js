@@ -33,6 +33,7 @@ export default {
     transform: "translateX(0.2em) translateY(1.1em)",
     transformOrigin: "top left",
     transition: "transform 200ms, color 200ms",
+    WebkitFontSmoothing: "antialiased",
     color: darkGrey,
   },
 
