@@ -61,7 +61,8 @@
     "start": "start-storybook -p 6006",
     "build": ". ./scripts/build.sh",
     "dry-run": "./node_modules/.bin/build-storybook -- --dry-run -c .storybook",
-    "deploy": ". ./scripts/deploy.sh"
+    "deploy": ". ./scripts/deploy.sh",
+    "publish-coverage": ". ./scripts/publish_coverage.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -74,12 +75,13 @@
   ],
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/jest-setup.js",
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/**/*.d.ts"
     ],
     "coverageReporters": [
-      "text"
+      "lcov", "text"
     ],
     "resolver": "jest-pnp-resolver",
     "setupFiles": [
@@ -130,6 +132,7 @@
     "@storybook/cli": "^4.1.7",
     "@storybook/react": "^4.1.7",
     "@storybook/storybook-deployer": "^2.8.1",
+    "codecov": "^3.1.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "jest-enzyme": "^7.0.1",

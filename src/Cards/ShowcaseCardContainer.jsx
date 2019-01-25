@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Unique from "../Helpers/Unique";
 
 
-class ShowcaseCardContainerError extends Error {
+export class ShowcaseCardContainerError extends Error {
   constructor(message) {
     super(`Props Error: ${message}`);
   }
@@ -57,11 +57,13 @@ class ShowcaseCardContainer extends React.Component {
 ShowcaseCardContainer.propTypes = {
   column: PropTypes.bool,
   row: PropTypes.bool,
+  children: PropTypes.any,
 };
 
 ShowcaseCardContainer.defaultProps = {
   column: false,
   row: false,
+  children: [],
 };
 
 export default ShowcaseCardContainer

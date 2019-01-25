@@ -5,9 +5,12 @@ import ClosestMove from "../Helpers/ClosestMove";
 import CircleSlice from "../Helpers/CircleSlice";
 
 
+export const CarouselChildrenError = {};
+
 export default class Carousel extends React.Component {
   constructor(props) {
     super(props);
+    this.validate();
     this.state = {
       rotate: 0,
       loaded: false,
@@ -16,6 +19,14 @@ export default class Carousel extends React.Component {
     this.body = React.createRef();
     this.handleKeydown = this.handleKeydown.bind(this);
     this.handleCardClick = this.handleCardClick.bind(this);
+  }
+
+  validate() {
+    try {
+      if (!this.props.children.length) throw CarouselChildrenError;
+    } catch (e) {
+      if (e !== CarouselChildrenError) throw e;
+    }
   }
 
   componentDidMount() {

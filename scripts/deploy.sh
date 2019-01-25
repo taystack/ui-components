@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 echo """
+
   Ensure we are on 'master'
+
 """
 git checkout master
 # branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
@@ -31,3 +33,5 @@ echo """
 git add . &&\
 git commit -m "Deploying github pages" &&\
 git push origin master
+
+yarn publish-coverage
