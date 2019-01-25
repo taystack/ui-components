@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Input from "../../src/Inputs/Input";
+import Checkbox from "../../src/Inputs/Checkbox";
 import Font from "../../src/Styles/Font";
 
 
@@ -9,7 +10,7 @@ class InputRenderer extends React.Component {
     super(props);
 
     this.state = {
-      error: "",
+      error: false,
       label: "Label",
       defaultValue: "Default value",
       errorText: "This thing has an error",
@@ -30,10 +31,7 @@ class InputRenderer extends React.Component {
   }
 
   setError(event) {
-    let error = "There is an error";
-    if (this.state.error) {
-      error = false;
-    }
+    const error = !this.state.error;
     this.setState({ error });
   }
 
@@ -43,7 +41,12 @@ class InputRenderer extends React.Component {
         display: "flex",
         fontFamily: Font.family,
       }}>
-        <div>
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginLeft: 100,
+        }}>
           <Input
             style={this.style}
             label={this.state.label}
@@ -74,10 +77,13 @@ class InputRenderer extends React.Component {
             onChange={this.onChange("errorText")}
             defaultValue={this.state.errorText}
           />
-          <div style={this.style}>
-            <input id="error" type="checkbox" onChange={this.setError} />
-            <label htmlFor="error">Set error</label>
-          </div>
+          <Checkbox
+            style={this.style}
+            id="checkbox-1"
+            onChange={this.setError}
+            label="Set error"
+            defaultChecked={this.state.error}
+          />
         </div>
       </div>
     );
@@ -86,7 +92,7 @@ class InputRenderer extends React.Component {
 
 
 storiesOf("Inputs", module)
-.add("<Input />", () => {
+.add("Try-out", () => {
   return (<InputRenderer />);
 })
 ;

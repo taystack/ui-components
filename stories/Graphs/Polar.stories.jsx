@@ -2,6 +2,8 @@ import React from "react";
 import { storiesOf } from '@storybook/react';
 import Random from "../../src/Helpers/Random";
 import Polar from "../../src/Graphs/Polar";
+import ShowcaseCard from "../../src/Cards/ShowcaseCard";
+import javascript from "../../images/JavaScriptBackground.png";
 
 
 class PolarTester extends React.Component {
@@ -22,8 +24,9 @@ class PolarTester extends React.Component {
 
   get reset() {
     return {
+      clicked: "",
       data: [1,3,2,5,2,5],
-      labels: ["foo", "bar", "baz", "bin", "pho", "foo1"],
+      labels: ["foo", "bar", "baz", "bin", "pho", "foobar"],
     }
   }
 
@@ -42,8 +45,29 @@ class PolarTester extends React.Component {
     })
   }
 
-  handleClick(value, label) {
-    console.log("Polar click", label, value);
+  handleClick(value, label, index) {
+    this.setState({
+      clicked: `Clicked - ${label}: ${value}`
+    })
+  }
+
+  get body() {
+    let body = (
+      <Polar
+        data={this.state.data}
+        labels={this.state.labels}
+        onClick={this.handleClick}
+      />
+    );
+    if (this.props.showcase) {
+      body = (
+        <ShowcaseCard img={{src:javascript,alt:"loading..."}}>
+          <div style={{marginTop: "3em"}}>JavaScript Skills</div>
+          {body}
+        </ShowcaseCard>
+      );
+    }
+    return body;
   }
 
   render() {
@@ -51,11 +75,8 @@ class PolarTester extends React.Component {
       <div>
         <button onClick={this.handleAdd}>Add data</button>
         <button onClick={this.handleReset}>Reset data</button>
-        <Polar
-          data={this.state.data}
-          labels={this.state.labels}
-          onClick={this.handleClick}
-        />
+        {this.state.clicked}
+        {this.body}
       </div>
     );
   }
@@ -64,5 +85,8 @@ class PolarTester extends React.Component {
 storiesOf('PolarGraph', module)
 .add('Basic', () => (
   <PolarTester />
+))
+.add('In ShowcaseCard', () => (
+  <PolarTester showcase />
 ))
 ;

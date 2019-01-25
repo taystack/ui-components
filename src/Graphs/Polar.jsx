@@ -47,19 +47,19 @@ export default class PolarGraph extends React.Component {
     if (!clickedElements.length) return;
     const index = clickedElements[0]._index;
     const { data, labels } = this.props;
-    this.props.onClick(data[index], labels[index]);
+    this.props.onClick(data[index], labels[index], index);
   }
 
   render() {
     return (
       <div style={{
-        height: 300,
-        width: 400,
+        height: 400,
+        width: 300,
       }}>
         <Polar
           ref={this.chart}
-          width={200}
-          height={200}
+          height={400}
+          width={300}
           data={this.data}
           options={this.options}
           onElementsClick={this.handleClick}
@@ -73,10 +73,12 @@ PolarGraph.propTypes = {
   data: PropTypes.array,
   labels: PropTypes.array,
   onClick: PropTypes.func,
+  focusIndex: PropTypes.number,
 };
 
 PolarGraph.defaultProps = {
   data: {},
   labels: [],
   onClick: () => {},
+  focusIndex: -1,
 };

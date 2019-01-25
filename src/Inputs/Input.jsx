@@ -135,10 +135,7 @@ Input.propTypes = {
   label: PropTypes.string,
   style: PropTypes.object,
   inputStyle: PropTypes.object,
-  error: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.string,
-  ]),
+  error: PropTypes.bool,
   errorText: PropTypes.string,
 }
 

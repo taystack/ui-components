@@ -12,7 +12,7 @@ export default {
   },
 
   Input: {
-    padding: "0.55em 1em",
+    padding: "0.55em 0.2em",
     paddingTop: "1em",
     outline: "none",
     border: "none",
@@ -30,7 +30,7 @@ export default {
   InputLabel: {
     zIndex: "-1",
     position: "absolute",
-    transform: "translateX(1em) translateY(1.1em)",
+    transform: "translateX(0.2em) translateY(1.1em)",
     transformOrigin: "top left",
     transition: "transform 200ms, color 200ms",
     color: darkGrey,
@@ -38,7 +38,7 @@ export default {
 
 
   InputLabelMove: {
-    transform: "translateX(0em) translateY(0em) scale(0.6)",
+    transform: "translateX(0em) translateY(0em) scale(0.7)",
     color: darkGrey,
   },
 
