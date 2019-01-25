@@ -1,6 +1,6 @@
 ### [Component Demo](https://taystack.github.io/ui-components/storybook-static/)
 
-### [Docs](https://taystack.github.io/ui-components/docs/README)
+### [Docs](https://taystack.github.io/ui-components/docs/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and implements [Storybook](https://github.com/storybooks/storybook) with [Storybook deployer](https://github.com/storybooks/storybook-deployer).
 
