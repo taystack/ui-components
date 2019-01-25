@@ -39,3 +39,9 @@ Run all tests with coverage using [Jest](https://jestjs.io/)
 #### `yarn build`
 
 Builds a deployable instance of storybook with [Storybook deployer](https://github.com/storybooks/storybook-deployer)
+
+### Contributing
+
+Have any suggestions? Think it could be done better? (Fire out an issue)[https://github.com/taystack/ui-components/issues].
+
+Are you a Hero? PRs will get reviewed.
