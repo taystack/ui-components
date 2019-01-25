@@ -1,10 +1,8 @@
-[GitHub](https://taystack.github.io/ui-components/)
+## Docs
 
-# Docs
+[Checkbox](https://taystack.github.io/ui-components/docs/Checkbox#checkbox)
 
-[Checkbox](https://taystack.github.io/ui-components/docs/Checkbox#Checkbox)
-
-[Input](https://taystack.github.io/ui-components/docs/Input#Input)
+[Input](https://taystack.github.io/ui-components/docs/Input#input)
 
 ### Contributing
 

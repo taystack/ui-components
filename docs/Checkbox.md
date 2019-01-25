@@ -1,10 +1,8 @@
-[GitHub](https://taystack.github.io/ui-components/)
+[Checkbox](https://taystack.github.io/ui-components/docs/Checkbox#checkbox)
 
-[Checkbox](https://taystack.github.io/ui-components/docs/Checkbox#Checkbox)
+[Input](https://taystack.github.io/ui-components/docs/Input#input)
 
-[Input](https://taystack.github.io/ui-components/docs/Input#Input)
-
-# Checkbox
+## Checkbox
 
 ## Use
 
@@ -18,8 +16,7 @@ import { Checkbox } from "@taystack/react-ui";
 ## Props
 
 | Prop | Type | Required | Default |
-|:-|:-:|:-:|=:|
-|id|String|[x]||
-|label|String|[ ]|`""`|
-|onChange|Function|[ ]|`x => x`|
-|style|Object|[ ]|`{}` see notes|
+|id|String|true||
+|label|String|false|`""`|
+|onChange|Function|false|`x => x`|
+|style|Object|false|`{}` see notes|

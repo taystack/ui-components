@@ -1,10 +1,8 @@
-[GitHub](https://taystack.github.io/ui-components/)
+[Checkbox](https://taystack.github.io/ui-components/docs/Checkbox#checkbox)
 
-[Checkbox](https://taystack.github.io/ui-components/docs/Checkbox#Checkbox)
+[Input](https://taystack.github.io/ui-components/docs/Input#input)
 
-[Input](https://taystack.github.io/ui-components/docs/Input#Input)
-
-# Input
+## Input
 
 ## Use
 
