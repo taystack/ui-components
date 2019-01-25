@@ -4,8 +4,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and implements [Storybook](https://github.com/storybooks/storybook) with [Storybook deployer](https://github.com/storybooks/storybook-deployer).
 
-[develop](https://github.com/taystack/ui-components/tree/develop) contains the source code.
-
 ## Installation _Coming Soon_
 ```bash
 yarn add @taystack/react-ui
@@ -18,6 +16,7 @@ Clone the project into a local directory and install dependencies
 ```bash
 $ git clone ...
 
+$ cd ui-components
 $ yarn
 ```
 

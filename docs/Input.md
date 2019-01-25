@@ -4,6 +4,8 @@
 
 ## Input
 
+[Inputs Demo](https://taystack.github.io/ui-components/storybook-static/?selectedKind=Inputs) contains a form using an input.
+
 ## Use
 
 ```javascript
@@ -16,7 +18,6 @@ import { Input } from "@taystack/react-ui";
 ## Props
 
 | prop | type | required | default |
-|:-|:-:|:-:|=:|
 |label|String|[ ]|`""`|
 |defaultValue|String|[ ]|`""`|
 |style|Object|[ ]|`{}` see below|
@@ -24,7 +25,7 @@ import { Input } from "@taystack/react-ui";
 |error|Boolean|[ ]|`false`|
 |errorText|String|[ ]|`""` see below|
 
-### Notes
+## Notes
 
 #### `label` String
 
@@ -34,7 +35,7 @@ If present, will display a label for the input. Keep it short.
 
 Sets the input value to the String assigned.
 
-Note: Changing this value will modify the value of input.
+Note: Changing this value will modify the value of this input.
 
 #### `style` Object
 
