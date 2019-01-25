@@ -15,8 +15,8 @@ export const isTruthy = (item) => {
 }
 
 export default {
-  isArray,
-  isObject,
-  isString,
-  isTruthy,
+  array: isArray,
+  object: isObject,
+  string: isString,
+  truthy: isTruthy,
 };

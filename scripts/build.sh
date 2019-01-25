@@ -2,19 +2,26 @@
 
 echo """
 
-  Make sure you commit your changes and push develop!!!
-
-  Moving to 'master' and building storybook
+  Building storybook Demo
 
 """
+# yarn dry-run
 
-git checkout master &&\
-echo -ne ':wq\n' | git pull origin develop &&\
-yarn dry-run
+echo """
+
+  Build importable library
+
+"""
+NODE_ENV='production' \
+./node_modules/.bin/webpack \
+-o ./dist/index.js \
+--config ./config/webpack.config.js \
+--env.production
+
 
 echo """
 
   Running tests, building coverage report
 
 """
-yarn test
+# yarn test

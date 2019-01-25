@@ -81,7 +81,8 @@
       "!src/**/*.d.ts"
     ],
     "coverageReporters": [
-      "lcov", "text"
+      "lcov",
+      "text"
     ],
     "resolver": "jest-pnp-resolver",
     "setupFiles": [
@@ -136,7 +137,8 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "jest-enzyme": "^7.0.1",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "webpack-cli": "^3.2.1"
   },
   "storybook-deployer": {
     "gitUsername": "taystack",
