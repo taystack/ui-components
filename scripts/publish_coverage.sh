@@ -5,4 +5,4 @@ echo """
   Publishing Coverage
 
 """
-./node_modules/.bin/codecov --token="$CODECOV_TOKEN"
+./node_modules/.bin/codecov --token="$CODECOV_TOKEN_UI_COMPONENTS"
