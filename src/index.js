@@ -28,7 +28,7 @@ import Take from "./Helpers/Take";
 import Times from "./Helpers/Times";
 import Unique from "./Helpers/Unique";
 
-export default {
+export {
   CardContainer,
   Carousel,
   HopCard,

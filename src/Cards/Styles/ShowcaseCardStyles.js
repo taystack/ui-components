@@ -16,8 +16,8 @@ export default (augment) => {
   const height = EitherOr(styles.height, HEIGHT);
   const width = EitherOr(styles.width, WIDTH);
   const color = EitherOr(styles.color, COLOR);
-  const borderRadius = `${EitherOr(styles.borderRadius, BORDER_RADIUS)}px`;
-  const gradientBackground = EitherOr(styles.background, "#fff");
+  const borderRadius = EitherOr(styles.borderRadius, BORDER_RADIUS);
+  const gradientBackground = styles.gradientBackground;
   const boundWidth = width + 40;
   const boundHeight = height + 80;
   return {
@@ -74,7 +74,6 @@ export default (augment) => {
       top: `${height + SPACING}px`,
       width: `${boundWidth}px`,
       height: "70px",
-      background: `linear-gradient(0deg, ${gradientBackground}, ${gradientBackground}, transparent)`,
     },
   };
 };

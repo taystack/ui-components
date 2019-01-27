@@ -41,9 +41,14 @@ class ShowcaseEditor extends React.Component {
   constructor(props) {
     super(props);
 
+    const r = document.getElementById("root");
+    console.log("r.style", r.style);
+
     this.state = {
-      imgSrc: "http://placekitten.com/g/300/400",
+      imgSrc: "",
       frontImgSrc: yarn.img.src,
+      cardBackground: "purple",
+      gradientBackground: "white",
     };
 
     this.onChange = this.onChange.bind(this);
@@ -64,6 +69,8 @@ class ShowcaseEditor extends React.Component {
       <div style={{ display: "flex", fontFamily: Font.family }}>
         <div>
           <ShowcaseCard
+            gradientBackground={this.state.gradientBackground}
+            cardBackground={this.state.cardBackground}
             img={{ src: this.state.imgSrc }}
             frontImg={{ src: this.state.frontImgSrc }}
           />
@@ -83,6 +90,18 @@ class ShowcaseEditor extends React.Component {
             label="Props.frontImg.src"
             onChange={this.onChange("frontImgSrc")}
             defaultValue={this.state.frontImgSrc}
+          />
+          <Input
+            style={this.style}
+            label="Props.cardBackground"
+            onChange={this.onChange("cardBackground")}
+            defaultValue={this.state.cardBackground}
+          />
+          <Input
+            style={this.style}
+            label="Props.gradientBackground"
+            onChange={this.onChange("gradientBackground")}
+            defaultValue={this.state.gradientBackground}
           />
         </div>
       </div>

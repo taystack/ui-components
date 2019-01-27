@@ -11,6 +11,7 @@ const HEIGHT = 230;
 
 export default (styles) => ({
   HopCardOuter: {
+    transition: "box-shadow 200ms, margin 200ms",
     margin: "1em",
     flexBasis: `${EitherOr(styles.width, WIDTH)}px`,
     borderRadius: `${BORDER_RADIUS}px`,

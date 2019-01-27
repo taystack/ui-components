@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import LoadingImage from "../Components/LoadingImage";
-import Classnames from "../Helpers/Classnames";
 import Styles from "./Styles/HopCardStyles";
-import PseudoStyles from "../PseudoStyles/HopCardPseudoStyles.module.css";
 
 
 /*
@@ -23,11 +21,10 @@ const HopCard = ({ children, style, imgSrc }, ...props) => {
   );
   const styles = Styles(style);
   const image = imgSrc ? buildImg(imgSrc) : null;
-  const className = Classnames(props.className, PseudoStyles.HopCardOuter);
   return (
     <div
       style={styles.HopCardOuter}
-      className={className}
+      className={props.className}
     >
       <div style={styles.HopCard}>
         <div style={styles.Container}>

@@ -6,7 +6,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and implements [Storybook](https://github.com/storybooks/storybook) with [Storybook deployer](https://github.com/storybooks/storybook-deployer).
 
-## Installation _Coming Soon_
+## Installation
 ```bash
 yarn add @taystack/react-ui
 ```

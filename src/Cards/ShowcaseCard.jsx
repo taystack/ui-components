@@ -14,7 +14,7 @@ class ShowcaseCard extends React.Component {
 
   constructor(props) {
     super(props);
-    this.style = Styles(props.style);
+    this.setStyles(props);
     this.height = EitherOr(HEIGHT, props.height);
     this.width = EitherOr(WIDTH, props.width);
     this.state = {
@@ -37,6 +37,22 @@ class ShowcaseCard extends React.Component {
 
   componentWillUnmount() {
     this.clearAsyncCalls();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { cardBackground, gradientBackground } = this.props;
+    const cardUpdate = cardBackground !== nextProps.cardBackground;
+    const gradientUpdate = gradientBackground !== nextProps.gradientBackground;
+    if (cardUpdate || gradientUpdate) this.forceUpdate();
+  }
+
+  setStyles(props) {
+    const { style, cardBackground, gradientBackground } = props;
+    this.style = Styles({
+      ...style,
+      cardBackground,
+      gradientBackground,
+    });
   }
 
   clearAsyncCalls() {
@@ -211,6 +227,7 @@ class ShowcaseCard extends React.Component {
   }
 
   buildBackgroundImage() {
+    if (!this.props.img.src.length) return null;
     return (
       <img
         src={this.props.img.src}
@@ -231,9 +248,7 @@ class ShowcaseCard extends React.Component {
     const foreground = this.renderForeground();
     return (
       <div
-        style={{
-          ...this.style.BoundingRect,
-        }}
+        style={this.style.BoundingRect}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
         onMouseMove={this.handleMouseMove}
@@ -248,6 +263,7 @@ class ShowcaseCard extends React.Component {
             style={{
               ...this.style.CardBody,
               transform: this.calculateRotation(),
+              background: this.props.cardBackground,
             }}
           >
             {image}
@@ -259,12 +275,16 @@ class ShowcaseCard extends React.Component {
                 transform: this.calculateRotation(true),
                 marginTop: "20px",
                 height: "100%",
+                backgroundColor: this.props.cardBackground,
               }}>
               {image}
               {foreground}
             </div>
           </div>
-          <div className="MirrorFade" style={this.style.MirrorFade} />
+          <div className="MirrorFade" style={{
+            ...this.style.MirrorFade,
+            background: `linear-gradient(0deg, ${this.props.gradientBackground} 50%, transparent)`,
+          }} />
         </div>
       </div>
     );
@@ -276,10 +296,13 @@ ShowcaseCard.propTypes = {
   title: PropTypes.string,
   img: PropTypes.object,
   frontImg: PropTypes.any,
+  cardBackground: PropTypes.string,
+  gradientBackground: PropTypes.string,
+  style: PropTypes.object,
+  backgroundElemId: PropTypes.string,
 };
 
 ShowcaseCard.defaultProps = {
-  style: {},
   text: "",
   title: "",
   img: {
@@ -287,6 +310,10 @@ ShowcaseCard.defaultProps = {
     alt: "ShowcaseCard - missing props.img.alt",
   },
   frontImg: false,
+  cardBackground: "",
+  gradientBackground: "#fff",
+  style: {},
+  backgroundElemId: "",
 };
 
 export default ShowcaseCard;
