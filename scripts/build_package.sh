@@ -16,5 +16,7 @@ NODE_ENV='production' \
 --ignore "./src/tests/**/*.*"
 
 echo """
-  Done building package
+  Done building package. To publish to the NPM registry:
+
+    npm publish --access public
 """
