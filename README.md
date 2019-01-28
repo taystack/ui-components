@@ -1,4 +1,4 @@
-![codecov](https://codecov.io/gh/taystack/ui-components/commit/59e5c18d302870563714651997814eaae78072b4/graphs/badge.svg)
+![codecov](https://codecov.io/gh/taystack/ui-components/commit/59e5c18d302870563714651997814eaae78072b4/graphs/badge.svg) [![Build Status](https://travis-ci.org/taystack/ui-components.svg?branch=master)](https://travis-ci.org/taystack/ui-components)
 
 ### [Component Demo](https://taystack.github.io/ui-components/storybook-static/)
 
