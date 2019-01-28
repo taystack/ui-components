@@ -1,6 +1,5 @@
 import React from "react";
-import MatchFinder from "../../Helpers/MatchFinder";
-import Merge from "../../Helpers/Merge";
+import { MatchFinder, Merge } from "@taystack/js-helpers";
 import Color from "../../Colors/Colors";
 
 

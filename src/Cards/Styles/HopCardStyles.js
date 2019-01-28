@@ -1,6 +1,6 @@
+import { EitherOr } from "@taystack/js-helpers";
 import Color from "../../Colors/Colors";
 import LinearGradient from "../../Colors/LinearGradient";
-import EitherOr from "../../Helpers/EitherOr";
 import Font from "../../Styles/Font";
 
 const ACCENT = Color.grey;

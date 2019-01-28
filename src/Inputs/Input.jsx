@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Omit } from "@taystack/js-helpers";
 import Styles from "./Styles/Input";
-import Omit from "../Helpers/Omit";
 
 
 class Input extends React.Component {

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Classnames from "../../Helpers/Classnames";
+import { Classnames } from "@taystack/js-helpers";
 
 
 export default class FilterResult extends React.Component {

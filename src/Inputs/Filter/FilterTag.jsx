@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Classnames from "../../Helpers/Classnames";
-import Counter from "../../Helpers/Counter";
+import { Classnames } from "@taystack/js-helpers";
+import Counter from "@taystack/js-counter";
 
 
 class FilterTag extends React.Component {

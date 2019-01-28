@@ -1,4 +1,4 @@
-import EitherOr from "../../Helpers/EitherOr";
+import { EitherOr } from "@taystack/js-helpers";
 
 
 export default (direction) => ({

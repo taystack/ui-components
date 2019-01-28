@@ -2,7 +2,7 @@
   "name": "@taystack/react-ui",
   "license": "MIT",
   "author": "Taylor Stackpole (@taystack)",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "main": "dist/index.js",
   "keywords": [
     "react",
@@ -22,8 +22,8 @@
     "dist"
   ],
   "dependencies": {
-    "@taystack/js-counter": "^0.2.0",
-    "@taystack/js-helpers": "^0.7.0",
+    "@taystack/js-counter": "0.4.1",
+    "@taystack/js-helpers": "0.7.0",
     "chart.js": "^2.7.3",
     "react-chartjs-2": "^2.7.4"
   },

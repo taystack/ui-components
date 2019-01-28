@@ -1,5 +1,5 @@
 import Color from "../../Colors/Colors";
-import EitherOr from "../../Helpers/EitherOr";
+import { EitherOr } from "@taystack/js-helpers";
 
 
 const COLOR = Color.black;

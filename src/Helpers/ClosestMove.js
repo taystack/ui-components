@@ -1,4 +1,4 @@
-import Clone from "./Clone";
+import { Clone } from "@taystack/js-helpers";
 
 
 class ClosestMove {

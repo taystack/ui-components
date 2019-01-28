@@ -1,9 +1,9 @@
+import { ModIndex } from "@taystack/js-helpers";
 import {
   DeepColors,
   BasicColors,
   LightColors
 } from "./Colors";
-import ModIndex from "../Helpers/ModIndex";
 
 
 const ColorType = (index) => {

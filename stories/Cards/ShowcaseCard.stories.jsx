@@ -15,8 +15,43 @@ import {
   google,
   link,
   yarn,
+  spiderCat,
 } from "../CardData";
 
+const Badges = ({ name, title }) => {
+  const style = {
+    display: "flex",
+    justifyContent: "space-around",
+    marginTop: 20,
+    width: "100%",
+  };
+  const codeCov = {
+    href: `https://codecov.io/gh/taystack/${name}`,
+    src: `https://codecov.io/gh/taystack/${name}/branch/master/graph/badge.svg`,
+  };
+  const travisCi = {
+    href: `https://travis-ci.org/taystack/${name}`,
+    src: `https://travis-ci.org/taystack/${name}.svg?branch=master`,
+  };
+  return (
+    <div style={style}>
+      <a
+        href={codeCov.href}
+        alt="codecov">
+        <img
+          src={codeCov.src}
+          alt="codecov"/>
+        </a>
+      <a
+        href={travisCi.href}
+        alt="travis-ci">
+        <img
+          src={travisCi.src}
+          alt="travis-ci"/>
+      </a>
+    </div>
+  );
+}
 
 const BuildShowcase = ({ sources, row, column, children }) => {
   let body = children;
@@ -41,8 +76,7 @@ class ShowcaseEditor extends React.Component {
   constructor(props) {
     super(props);
 
-    const r = document.getElementById("root");
-    console.log("r.style", r.style);
+    // const r = document.getElementById("root");
 
     this.state = {
       imgSrc: "",
@@ -120,21 +154,36 @@ storiesOf("ShowcaseCard", module)
   );
 })
 .add("{img, children}", () => {
+  const style = {
+    marginTop: 20,
+  };
   return (
-    <ShowcaseCard img={grass.img} frontImg={google.frontImg}>
-      <input
-        placeholder="Search Google or type a URL"
-        style={{
-          background: "#eee",
-          border: 0,
-          borderRadius: 20,
-          padding: 10,
-          width: "calc(100% - 80px)",
-          outline: "none",
-          marginTop: 20,
-        }}
-      />
-    </ShowcaseCard>
+    <ShowcaseCardContainer row>
+      <ShowcaseCard img={grass.img} frontImg={google.frontImg}>
+        <input
+          placeholder="Search Google or type a URL"
+          style={{
+            background: "#eee",
+            border: 0,
+            borderRadius: 20,
+            padding: 10,
+            width: "calc(100% - 80px)",
+            outline: "none",
+            marginTop: 20,
+          }}
+        />
+      </ShowcaseCard>
+
+      <ShowcaseCard
+        img={spiderCat.img}
+        frontImg={spiderCat.frontImg}
+      >
+        <h3 style={{color: "#fff", margin:0}}>GitHub</h3>
+        <Badges name="ui-components" title="@taystack/react-ui" />
+        <Badges name="js-helpers" title="@taystack/js-helpers" />
+        <Badges name="js-counter" title="@taystack/js-counter" />
+      </ShowcaseCard>
+    </ShowcaseCardContainer>
   );
 })
 .add("<ShowcaseCard />", () => (

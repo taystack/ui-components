@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import EitherOr from "../Helpers/EitherOr";
-import Counter from "../Helpers/Counter";
+import { EitherOr } from "@taystack/js-helpers";
+import Counter from "@taystack/js-counter";
 // import LoadingImage from "../Components/LoadingImage";
 import Styles, { HEIGHT, WIDTH } from "./Styles/ShowcaseCardStyles";
 

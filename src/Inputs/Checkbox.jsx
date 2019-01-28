@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Styles from "./Styles/Checkbox";
-import Omit from "../Helpers/Omit";
+import { Omit } from "@taystack/js-helpers";
 
 
 class Checkbox extends React.Component {

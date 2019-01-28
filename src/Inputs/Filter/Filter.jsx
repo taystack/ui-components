@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Classnames, Pick } from "@taystack/js-helpers";
 import Styles from "../Styles/Filter";
-import Classnames from "../../Helpers/Classnames";
-import Pick from "../../Helpers/Pick";
 import FilterTag from "./FilterTag";
 import FilterResult from "./FilterResult";
 import FilterResultText from "./FilterResultText";

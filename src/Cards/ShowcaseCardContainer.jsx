@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Unique from "../Helpers/Unique";
+import { Unique } from "@taystack/js-helpers";
 
 
 export class ShowcaseCardContainerError extends Error {

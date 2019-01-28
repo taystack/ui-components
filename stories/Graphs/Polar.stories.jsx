@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from '@storybook/react';
-import Random from "../../src/Helpers/Random";
+import { Random } from "@taystack/js-helpers";
 import Polar from "../../src/Graphs/Polar";
 import ShowcaseCard from "../../src/Cards/ShowcaseCard";
 import javascript from "../../images/JavaScriptBackground.png";

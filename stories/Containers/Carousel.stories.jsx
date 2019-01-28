@@ -1,8 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { Times } from "@taystack/js-helpers";
 import Carousel from "../../src/Cards/Carousel";
 import ShowcaseCard from "../../src/Cards/ShowcaseCard";
-import Times from "../../src/Helpers/Times";
 import {
   cat1,
   polygons,

@@ -22,6 +22,8 @@ import SpiderMan from "../images/SpiderMan.png";
 import SpiderManBackground from "../images/SpiderManBackground.png";
 import Link from "../images/Link.png";
 import LinkBackground from "../images/LinkBackground.png";
+import SpiderCat from "../images/SpiderCat.png";
+import SpiderCatBackground from "../images/SpiderCatBackground.png";
 
 
 // Showcase props
@@ -70,6 +72,10 @@ export const link = {
 export const google = {
   frontImg: {src: Google, alt: "wait for it..."},
 };
+export const spiderCat = {
+  img: {src: SpiderCatBackground, alt: "spider octocat loading"},
+  frontImg: {src: SpiderCat, alt: "spider octocat loading"},
+};
 
 export default {
   cat1,
@@ -87,4 +93,5 @@ export default {
   pow,
   spiderman,
   google,
+  spiderCat,
 };
