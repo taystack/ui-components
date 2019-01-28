@@ -1429,6 +1429,14 @@
     "@svgr/plugin-svgo" "^4.0.3"
     loader-utils "^1.1.0"
 
+"@taystack/js-counter@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@taystack/js-counter/-/js-counter-0.2.0.tgz#65cd5d885d6790f58b3b5b02e2a9c1d2725f1150"
+
+"@taystack/js-helpers@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@taystack/js-helpers/-/js-helpers-0.7.0.tgz#0ecd2326186ae9d94e52948bd40e3f4d61d337f8"
+
 "@types/node@*":
   version "10.12.18"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.18.tgz#1d3ca764718915584fcd9f6344621b7672665c67"

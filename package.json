@@ -10,17 +10,20 @@
     "card"
   ],
   "scripts": {
-    "start": "start-storybook -p 6006",
-    "build": ". ./scripts/build.sh",
     "build-package": ". ./scripts/build_package.sh",
     "build-storybook": "./node_modules/.bin/build-storybook -- --dry-run -c .storybook",
+    "build": ". ./scripts/build.sh",
     "deploy": ". ./scripts/deploy.sh",
-    "test": "./node_modules/.bin/jest --coverage",
     "publish-coverage": ". ./scripts/publish_coverage.sh",
-    "publish-package": ". ./scripts/publish_package.sh"
+    "start": "start-storybook -p 6006",
+    "test": "./node_modules/.bin/jest --coverage"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "dependencies": {
+    "@taystack/js-counter": "^0.2.0",
+    "@taystack/js-helpers": "^0.7.0",
     "chart.js": "^2.7.3",
     "react-chartjs-2": "^2.7.4"
   },
